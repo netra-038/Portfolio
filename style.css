@@ -212,14 +212,16 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     border-radius: 50%;
+    display: block;
 }
 
-/* Placeholder shown when image is missing */
+/* Placeholder hidden by default; shown via onerror in JS */
 .photo-placeholder {
     position: absolute;
     inset: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -368,6 +370,8 @@ img {
 /* ================================================
    ACHIEVEMENTS & CERTIFICATES SECTION
 ================================================ */
+
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
